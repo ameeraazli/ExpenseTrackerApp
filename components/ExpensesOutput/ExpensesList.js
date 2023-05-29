@@ -1,4 +1,4 @@
-import { FlatList } from "react-native/types";
+import { FlatList } from "react-native";
 
 function ExpensesList() {
   return <FlatList />
