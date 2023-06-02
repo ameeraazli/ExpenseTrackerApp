@@ -60,6 +60,12 @@ const DUMMY_EXPENSES = [
     description: 'Another another book',
     amount: 18.59,
     date: new Date('2023-06-01')
+  },
+  {
+    id: 'e11',
+    description: 'Another another book',
+    amount: 18.59,
+    date: new Date('2023-06-01')
   }
 ];
 
@@ -110,7 +116,7 @@ function ExpensesContextProvider({children}) {
     expenses: expensesState,
     addExpense: addExpense,
     deleteExpense: deleteExpense,
-    updateExpense: updateExpense
+    updateExpense: updateExpense,
   };
 
   return (
