@@ -99,7 +99,7 @@ function ExpensesContextProvider({children}) {
   }
 
   function deleteExpense(id) {
-    dispatch({ type: 'ADD', payload: id});
+    dispatch({ type: 'DELETE', payload: id});
   }
 
   function updateExpense(id, expenseData) {
@@ -113,7 +113,11 @@ function ExpensesContextProvider({children}) {
     updateExpense: updateExpense
   };
 
-  return <ExpensesContext.Provider value={value}>{children}</ExpensesContext.Provider>
+  return (
+    <ExpensesContext.Provider value={value}>
+      {children}
+    </ExpensesContext.Provider>
+  );
 }
 
 export default ExpensesContextProvider;
