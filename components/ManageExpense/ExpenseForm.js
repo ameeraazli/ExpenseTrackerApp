@@ -2,8 +2,10 @@ import { Text, View, StyleSheet } from 'react-native';
 import Input from './Input';
 
 function ExpenseForm() {
-  function amountChangedHandler() {
+  const [amountValue, setAmountValue] = useState('');
 
+  function amountChangedHandler(enteredAmount) {
+    setAmountValue(entered);
   }
 
   return (
@@ -16,6 +18,7 @@ function ExpenseForm() {
           textInputConfig={{
             keyboardType: 'decimal-pad',
             onChangeText: amountChangedHandler,
+            value: amountValue
           }}
         />
         <Input
